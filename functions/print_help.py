@@ -4,4 +4,5 @@ def print_help():
     print("Add stock            -    \'add\'")
     print("Remove stock         -    \'remove\'")
     print("Update stock prices  -    \'update\'")
+    print("Show help            -    \'help\'")
     print("Quit                 -    \'quit\'")

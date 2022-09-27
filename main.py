@@ -1,8 +1,8 @@
-from func.show_stocks import show_stocks
-from func.add_stock import add_stock
-from func.remove_stock import remove_stock
-from func.update_stocks import update_stocks
-from func.print_help import print_help
+from functions.show_stocks import show_stocks
+from functions.add_stock import add_stock
+from functions.remove_stock import remove_stock
+from functions.update_stocks import update_stocks
+from functions.print_help import print_help
 
 def main():
     # ask for user input

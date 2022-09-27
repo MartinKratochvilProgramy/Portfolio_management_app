@@ -1,6 +1,6 @@
 from currency_converter import CurrencyConverter
 import sqlite3
-from func.stock_class import Stock
+from functions.stock_class import Stock
 
 def init_stocks():
     # for each stock in db finds current converted price in CZK and returns

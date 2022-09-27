@@ -1,8 +1,8 @@
-from func.init_stocks import init_stocks
-from func.write_get_functions import write_total_value, get_total_value, get_total_invested_value, get_daily_change
-from func.plot_portfolio_in_time import plot_portfolio_in_time
-from func.plot_pie import plot_pie
-from func.plot_relative_change import plot_relative_change_in_time
+from functions.init_stocks import init_stocks
+from functions.write_get_functions import write_total_value, get_total_value, get_total_invested_value, get_daily_change
+from functions.plot_portfolio_in_time import plot_portfolio_in_time
+from functions.plot_pie import plot_pie
+from functions.plot_relative_change import plot_relative_change_in_time
 from datetime import datetime
 
 def update_stocks():
