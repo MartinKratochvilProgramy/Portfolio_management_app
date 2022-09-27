@@ -30,7 +30,7 @@ def plot_relative_change_in_time():
     plt.plot(rel_x, rel_y, color="green")
     plt.grid()
     plt.gcf().autofmt_xdate()
-    plt.savefig('relativni_vyvoj.png')
+    plt.savefig('relative_change_in_time.png')
     plt.clf()
 
 if __name__ == '__main__':

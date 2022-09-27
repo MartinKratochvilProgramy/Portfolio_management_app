@@ -45,5 +45,5 @@ def plot_portfolio_in_time():
     plt.scatter(x_inv, y_inv, color='tab:orange')
     plt.plot(x_inv, y_inv, color='tab:orange', linestyle='--')
     plt.gcf().autofmt_xdate()
-    plt.savefig('vyvoj.png')
+    plt.savefig('portfolio_in_time.png')
     plt.clf()

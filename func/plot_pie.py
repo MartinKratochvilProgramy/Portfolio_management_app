@@ -1,13 +1,10 @@
 import matplotlib.pyplot as plt
-from func.write_get_functions import get_total_value
 
-def plot_pie(STOCKS):
+def plot_pie(STOCKS, total_value):
     names = []
     fractions = []
     
     for stock in STOCKS:
-        total_value = get_total_value()
-
         names.append(stock.ticker)
         fractions.append(stock.total_price / total_value)
 
