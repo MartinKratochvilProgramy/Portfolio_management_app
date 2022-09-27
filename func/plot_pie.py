@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from func.stock_functions import get_total_value
+from func.write_get_functions import get_total_value
 
 def plot_pie(STOCKS):
     names = []
@@ -17,7 +17,7 @@ def plot_pie(STOCKS):
     fig = plt.figure(figsize=(10.8, 8.6),dpi=160)
 
     plt.pie(fractions, labels = names, autopct='%1.1f%%', colors=colors, wedgeprops={"edgecolor":"dodgerblue",'linewidth': 1, 'antialiased': True})
-    plt.title("Portfolio vs indexy")
+    plt.title("Stocks")
     plt.savefig('pie.png')
     plt.clf()
 

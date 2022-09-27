@@ -68,10 +68,11 @@ def add_stock():
             new_amount = int(existing_stock[0][1]) + amount
             cursor.execute("UPDATE stocks SET amount=(?) WHERE ticker=(?)", (new_amount, ticker))
             conn.commit()
-            print(f"Added new stock! Ticker: {ticker} Amount: {amount} Currency: {currency}")
+            print(f"Added new stock! Ticker: {ticker} Amount: {amount} Currency: {currency}\n")
         else:
             # else add new column
             cursor.execute("INSERT INTO stocks VALUES (?, ?, ?)", (ticker, amount, currency))
+            print(f"Added new stock! Ticker: {ticker} Amount: {amount} Currency: {currency}\n")
             conn.commit()
         
         conn.close()

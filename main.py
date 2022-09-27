@@ -1,14 +1,16 @@
-from func.stock_functions import init_stocks, write_total_value, get_total_value, get_total_invested_value, get_daily_change
+from func.init_stocks import init_stocks
+from func.write_get_functions import write_total_value, get_total_value, get_total_invested_value, get_daily_change
 from func.plot_portfolio_in_time import plot_portfolio_in_time
 from func.plot_pie import plot_pie
 from func.plot_relative_change import plot_relative_change_in_time
+from func.add_stock import add_stock
 from datetime import datetime
 import time
 import os
 
 def main():
     #clear console
-    os.system('cls' if os.name=='nt' else 'clear')
+    # os.system('cls' if os.name=='nt' else 'clear')
 
     print("*********************************************************")
     print(f"Initializing stock prices at day {datetime.today().strftime('%d/%m/%Y')}...")
@@ -33,6 +35,7 @@ def main():
 
 
 if __name__ == '__main__':
+    add_stock()
     main()
 
     
