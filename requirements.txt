@@ -1,0 +1,6 @@
+pandas
+sqlite3
+datetime
+currency_converter
+matplotlib
+yfinance
