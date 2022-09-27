@@ -91,7 +91,7 @@ def get_daily_change():
     if len(df) > 1:
         #get percentual change
         if (datetime.today().day == datetime.strptime(inv_df.iloc[-1].iat[0], '%Y/%m/%d').day):
-            #if money was invested today. do not include in percent change
+            #if money was invested today. do not include in percent change because invested value would skew the % change
             percent_change = (df.iloc[-1].iat[1] - inv_df.iloc[-1].iat[1]) / df.iloc[-2].iat[1] * 100 - 100    #%
         else:
             percent_change = df.iloc[-1].iat[1] / df.iloc[-2].iat[1] * 100 - 100    #%
