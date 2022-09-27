@@ -1,5 +1,6 @@
 from func.init_stocks import init_stocks
 from func.add_stock import add_stock
+from func.show_stocks import show_stocks
 from func.remove_stock import remove_stock
 from func.write_get_functions import write_total_value, get_total_value, get_total_invested_value, get_daily_change
 from func.plot_portfolio_in_time import plot_portfolio_in_time
@@ -36,7 +37,24 @@ def main():
 
 
 if __name__ == '__main__':
-    add_stock()
-    main()
+    while True:
+        print("Select action:")
+        print("Show stocks          -    \'show\'")
+        print("Add stock            -    \'add\'")
+        print("Remove stock         -    \'remove\'")
+        print("Update stock prices  -    \'update\'")
+        print("Quit                 -    \'q\'")
 
+        action = input()
+
+        if (action == 'show'):
+            show_stocks()
+        elif (action == 'add'):
+            add_stock()
+        elif (action == 'remove'):
+            remove_stock()
+        elif (action == 'update'):
+            main()
+        elif(action == 'q'):
+            break
     
