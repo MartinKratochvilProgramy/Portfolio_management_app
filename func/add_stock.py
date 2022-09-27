@@ -42,7 +42,7 @@ def add_stock():
             add_stock()
 
         # add amount
-        amount = input("Amount: ")
+        amount = input("Amount to add: ")
         amount.strip()
         if not amount.isdigit():
             print("Amount not an int!")
