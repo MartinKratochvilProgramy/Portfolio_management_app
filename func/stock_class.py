@@ -9,12 +9,10 @@ class Stock:
         self.currency = currency
 
     def get_stock_info(self):
-        df_list = list()
-
         data = yf.download(self.ticker, group_by="Ticker", period='7d', progress=False)
-        # print(f"{self.ticker} data: {data}")
-        df_list.append(data)
 
+        df_list = list()
+        df_list.append(data)
         df = pd.concat(df_list)
 
         for value in df['Close'].values.tolist():

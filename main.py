@@ -5,6 +5,7 @@ from func.update_stocks import update_stocks
 from func.print_help import print_help
 
 def main():
+    # ask for user input
     print_help()
 
     while True:
@@ -22,8 +23,12 @@ def main():
             update_stocks()
         elif (action == 'help'):
             print_help()
-        elif(action == 'q'):
+        elif(action == 'quit'):
             break
+        else:
+            print('Invalid input')
+            print("-------------------------------------------------------")
+            print_help()
 
 if __name__ == '__main__':
     main()

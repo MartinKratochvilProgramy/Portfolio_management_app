@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def plot_portfolio_in_time():
-#vývoj portfolia v čase - částky jsou v souboru acct_value_in_time.csv
+    #plot account value in time from acct_value_in_time.csv
     dates = []
     values = []
     df = pd.read_csv('acct_value_in_time.csv')
@@ -16,7 +16,7 @@ def plot_portfolio_in_time():
     x = [datetime.strptime(d, '%Y/%m/%d').date() for d in dates]
     y = values
 
-#vykreslí investované peníze - částky jsou v souboru money_invested.csv
+    # plot total invested values from money_invested.csv
     invested_dates = []
     invested_values = []
     df = pd.read_csv('money_invested.csv')
@@ -37,7 +37,7 @@ def plot_portfolio_in_time():
     plt.figure(figsize=(8.8, 6.6),dpi=160)
 
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m/%d/%Y'))
-    plt.gca().xaxis.set_major_locator(mdates.MonthLocator())    #značky na ose x měsíčně
+    plt.gca().xaxis.set_major_locator(mdates.MonthLocator())    #ticks on x-axis in months
 
     plt.title('Account value in time')
     plt.plot(x, y)
