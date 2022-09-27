@@ -6,7 +6,7 @@ Program requires python to be installed on your machine. Install required packag
 ```
 pip install -r requirements.txt
 ```
-After starting the program by running:
+Start the program by running:
 ```
 python main.py
 ```
