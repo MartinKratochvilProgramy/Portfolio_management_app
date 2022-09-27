@@ -20,7 +20,7 @@ Add stock - add stock to the portfolio, stock ticker has to be valid for the Yah
 
 Remove stock - remove stock from the porfolio
 
-Update stock prices - connects to the API and for each stock in the portfolio finds the current value
+Update stock prices - connects to the API and for each stock in the portfolio finds the current value, also calculates the total net worth of the portfolio, stores the values and outputs the charts described in the next chapter
 
 # Outputs
 After running the code program outputs several figures in the main folder. IMPORTANT: in order to create data for the time-dependent chart program should be run preferable every day, unsless the program is run the figures will not be updated.
