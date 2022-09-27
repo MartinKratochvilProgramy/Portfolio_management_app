@@ -4,7 +4,6 @@ def remove_stock():
     conn = sqlite3.connect('stocks.db')
     cursor = conn.cursor()
 
-
     # get user inputs
     if (input("Remove stock? [y/n] ") == "y"):
         # get ticker
@@ -46,16 +45,4 @@ def remove_stock():
         return
 
 if __name__ == '__main__':
-    conn = sqlite3.connect('stocks.db')
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM stocks")
-    items = cursor.fetchall()
-    print(items)
-
     remove_stock()
-
-    conn = sqlite3.connect('stocks.db')
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM stocks")
-    items = cursor.fetchall()
-    print(items)
