@@ -16,7 +16,7 @@ write actions into the console.
 
 Show stocks - lists all stocks in users portfolio
 
-Add stock - add stock to the portfolio, stock ticker has to be valid for the Yahoo finance API - go to finance.yahoo.com and search for stock tickers (eg. Apple = 'AAPL'), also specify the currency in which the stock is listed
+Add stock - add stock to the portfolio, stock ticker has to be valid for the Yahoo finance API - go to http://finance.yahoo.com and search for stock tickers (eg. Apple = 'AAPL'), also specify the currency in which the stock is listed
 
 Remove stock - remove stock from the porfolio
 
