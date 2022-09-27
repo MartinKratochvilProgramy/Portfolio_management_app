@@ -32,34 +32,34 @@ def add_stock():
     currencies = ["dollar", "euro", "koruna"]
 
     # get user inputs
-    if (input("Add new stock? [y/n] ") == "y"):
-        # add ticker
-        ticker = input("Ticker: ")
-        ticker.strip()
-        stock_data = yf.download(ticker, group_by="Ticker", period='7d', progress=False)
-        if (len(stock_data) == 0):
-            print("Incorrect ticker!")
-            add_stock()
+    # add ticker
+    ticker = input("Ticker: ")
+    ticker.strip()
+    stock_data = yf.download(ticker, group_by="Ticker", period='7d', progress=False)
+    if (len(stock_data) == 0):
+        print("Incorrect ticker!")
+        add_stock()
 
-        # add amount
-        amount = input("Amount to add: ")
-        amount.strip()
-        if not amount.isdigit():
-            print("Amount not an int!")
-            add_stock()
-        amount = int(amount)
-        if (amount <= 0):
-            print("Negative amount!")
-            add_stock()
+    # add amount
+    amount = input("Amount to add: ")
+    amount.strip()
+    if not amount.isdigit():
+        print("Amount not an int!")
+        add_stock()
+    amount = int(amount)
+    if (amount <= 0):
+        print("Negative amount!")
+        add_stock()
 
-        # add currency
-        currency = input("Currency [dollar, euro, koruna]:")
-        currency.strip()
-        if currency not in currencies:
-            print("Currency not in ")
-            print(currencies)
-            add_stock()
+    # add currency
+    currency = input("Currency [dollar, euro, koruna]: ")
+    currency.strip()
+    if currency not in currencies:
+        print("Currency not in ")
+        print(currencies)
+        add_stock()
         
+    if (input(f"Add new stock? {ticker, amount, currency} [y/n] ") == "y"):
         #find if stock of this ticker already exists
         cursor.execute("SELECT * FROM stocks WHERE ticker=(?)", (ticker, ))
         conn.commit()

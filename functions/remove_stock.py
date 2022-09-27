@@ -5,28 +5,28 @@ def remove_stock():
     cursor = conn.cursor()
 
     # get user inputs
-    if (input("Remove stock? [y/n] ") == "y"):
-        # get ticker
-        ticker = input("Ticker: ")
-        ticker.strip()
-        cursor.execute("SELECT * FROM stocks WHERE ticker=(?)", (ticker, ))
-        existing_stock = cursor.fetchall()
-        conn.commit()
-        if (len(existing_stock) == 0):
-            print("Stock not found")
-            remove_stock()
-        
-        # get remove amount
-        amount = input("Amount to remove: ")
-        amount.strip()
-        if not amount.isdigit():
-            print("Amount not an int!")
-            remove_stock()
-        amount = int(amount)
-        if (amount <= 0):
-            print("Negative amount!")
-            remove_stock()
+    # get ticker
+    ticker = input("Ticker: ")
+    ticker.strip()
+    cursor.execute("SELECT * FROM stocks WHERE ticker=(?)", (ticker, ))
+    existing_stock = cursor.fetchall()
+    conn.commit()
+    if (len(existing_stock) == 0):
+        print("Stock not found")
+        remove_stock()
+    
+    # get remove amount
+    amount = input("Amount to remove: ")
+    amount.strip()
+    if not amount.isdigit():
+        print("Amount not an int!")
+        remove_stock()
+    amount = int(amount)
+    if (amount <= 0):
+        print("Negative amount!")
+        remove_stock()
 
+    if (input(f"Remove stock? {ticker, amount} [y/n] ") == "y"):
         # find what the new amount will be
         # if 0 then remove stock from db
         new_amount = existing_stock[0][1] - amount
