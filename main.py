@@ -1,0 +1,38 @@
+from func.stock_functions import init_stocks, write_total_value, get_total_value, get_total_invested_value, get_daily_change
+from func.plot_portfolio_in_time import plot_portfolio_in_time
+from func.plot_pie import plot_pie
+from func.plot_relative_change import plot_relative_change_in_time
+from datetime import datetime
+import time
+import os
+
+def main():
+    #clear console
+    os.system('cls' if os.name=='nt' else 'clear')
+
+    print("*********************************************************")
+    print(f"Initializing stock prices at day {datetime.today().strftime('%d/%m/%Y')}...")
+    
+    STOCKS = init_stocks()
+    write_total_value(STOCKS)
+
+    total_account_value = get_total_value()
+    total_invested_value = get_total_invested_value()
+
+    print('\n')
+    print(f"Total account value: {total_account_value:_} kč")
+    print(f"Total invested value: {total_invested_value:_} kč")
+
+    print('\n')
+    print(f"Today's change: {get_daily_change()} %")
+    print(f"Total change: {round((total_account_value/total_invested_value - 1)*100, 2)}%")
+
+    plot_portfolio_in_time()
+    plot_relative_change_in_time()
+    plot_pie(STOCKS)
+
+
+if __name__ == '__main__':
+    main()
+
+    
