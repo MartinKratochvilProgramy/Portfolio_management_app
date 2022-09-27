@@ -31,7 +31,7 @@ Blue line shows total net worth in time, orange shows invested amount.
 ## Relative change
 Percent change in portfolio value since it's creation.
 
-![image](https://user-images.githubusercontent.com/94861828/192498302-9d1a27e4-8d9a-4995-a137-3aea4cef50f5.png)
+![image](https://user-images.githubusercontent.com/94861828/192499672-5a653a9d-aff3-40ad-95e5-e19092b74e4b.png)
 ## Pie
 Pie chart of percentage amount of each individual stock
 
