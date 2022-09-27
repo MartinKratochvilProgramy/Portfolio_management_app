@@ -31,6 +31,7 @@ def add_stock():
 
     currencies = ["dollar", "euro", "koruna"]
 
+    # get user inputs
     if (input("Add new stock? [y/n] ") == "y"):
         # add ticker
         ticker = input("Ticker: ")
@@ -59,7 +60,7 @@ def add_stock():
             print(currencies)
             add_stock()
         
-
+        #find if stock of this ticker already exists
         cursor.execute("SELECT * FROM stocks WHERE ticker=(?)", (ticker, ))
         conn.commit()
         existing_stock = cursor.fetchall()
@@ -77,7 +78,7 @@ def add_stock():
         
         conn.close()
 
-        #find how much was invested
+        #find how much money was invested
         df_list = list()
         df_list.append(stock_data)
         df = pd.concat(df_list)
@@ -114,12 +115,3 @@ def add_stock():
 
 if __name__ == '__main__':
     add_stock()
-    conn = sqlite3.connect('stocks.db')
-
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM stocks")
-    items = cursor.fetchall()
-    print(items)
-
-    conn.commit()
-    conn.close()
