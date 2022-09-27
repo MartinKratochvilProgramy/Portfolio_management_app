@@ -37,3 +37,6 @@ Pie chart of percentage amount of each individual stock
 
 ![image](https://user-images.githubusercontent.com/94861828/192498866-46aedc34-3277-4d5c-ba64-66379d985f76.png)
 
+# Future work
+If somebody cares I will write a GUI, maybe transform the project into a web app using flask/django.
+
