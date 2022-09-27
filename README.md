@@ -11,7 +11,9 @@ After starting the program by running:
 python main.py
 ```
 write actions into the console.
+
 ![image](https://user-images.githubusercontent.com/94861828/192496793-3c091ac7-da54-46ba-b16e-981bff569573.png)
+
 Show stocks - lists all stocks in users portfolio
 Add stock - add stock to the portfolio, stock ticker has to be valid for the Yahoo finance API - go to finance.yahoo.com and search for stock tickers (eg. Apple = 'AAPL'), also specify the currency in which the stock is listed
 Remove stock - remove stock from the porfolio
