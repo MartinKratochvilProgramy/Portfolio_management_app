@@ -35,6 +35,7 @@ def add_stock():
     # add ticker
     ticker = input("Ticker: ")
     ticker.strip()
+    if (ticker == 'q'): return
     stock_data = yf.download(ticker, group_by="Ticker", period='7d', progress=False)
     if (len(stock_data) == 0):
         print("Incorrect ticker!")
@@ -43,6 +44,7 @@ def add_stock():
     # add amount
     amount = input("Amount to add: ")
     amount.strip()
+    if (amount == 'q'): return
     if not amount.isdigit():
         print("Amount not an int!")
         add_stock()
@@ -54,6 +56,7 @@ def add_stock():
     # add currency
     currency = input("Currency [dollar, euro, koruna]: ")
     currency.strip()
+    if (currency == 'q'): return
     if currency not in currencies:
         print("Currency not in ")
         print(currencies)

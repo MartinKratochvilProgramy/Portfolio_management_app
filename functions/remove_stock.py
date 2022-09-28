@@ -1,6 +1,10 @@
 import sqlite3
+import os
 
 def remove_stock():
+    if not os.path.isfile('stocks.db'):
+        return
+
     conn = sqlite3.connect('stocks.db')
     cursor = conn.cursor()
 
@@ -8,6 +12,7 @@ def remove_stock():
     # get ticker
     ticker = input("Ticker: ")
     ticker.strip()
+    if (ticker == 'q'): return
     cursor.execute("SELECT * FROM stocks WHERE ticker=(?)", (ticker, ))
     existing_stock = cursor.fetchall()
     conn.commit()
@@ -18,6 +23,7 @@ def remove_stock():
     # get remove amount
     amount = input("Amount to remove: ")
     amount.strip()
+    if (amount == 'q'): return
     if not amount.isdigit():
         print("Amount not an int!")
         remove_stock()

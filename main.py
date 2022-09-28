@@ -23,7 +23,7 @@ def main():
             update_stocks()
         elif (action == 'help'):
             print_help()
-        elif(action == 'quit'):
+        elif(action == 'q'):
             break
         else:
             print('Invalid input')
