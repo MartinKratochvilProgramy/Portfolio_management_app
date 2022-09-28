@@ -1,5 +1,5 @@
 # Portfolio_management_app
-Manage your net worth with the Yahoo finance API
+Manage your net worth with the Yahoo finance API.
 
 # How to run
 Program requires python to be installed on your machine. Install required packages by running:
