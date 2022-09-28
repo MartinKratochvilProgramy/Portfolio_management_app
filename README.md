@@ -1,16 +1,16 @@
 # Portfolio_management_app
-Manage your net worth with the Yahoo finance API
+Manage your net worth with the Yahoo finance API.
 
 # How to run
 Program requires python to be installed on your machine. Install required packages by running:
 ```
 pip install -r requirements.txt
 ```
-After starting the program by running:
+Start the program by running:
 ```
 python main.py
 ```
-write actions into the console.
+Write actions into the console, following commands are available:
 
 ![image](https://user-images.githubusercontent.com/94861828/192496793-3c091ac7-da54-46ba-b16e-981bff569573.png)
 
@@ -23,7 +23,7 @@ Remove stock - remove stock from the porfolio
 Update stock prices - connects to the API and for each stock in the portfolio finds the current value, also calculates the total net worth of the portfolio, stores the values and outputs the charts described in the next chapter
 
 # Outputs
-After running the code program outputs several figures in the main folder. IMPORTANT: in order to create data for the time-dependent chart program should be run preferable every day, unsless the program is run the figures will not be updated.
+After running the code program outputs several figures in the main folder, note that the displayed values are in CZK. IMPORTANT: in order to create data for the time-dependent chart program should be run preferable every day, unsless the program is run the figures will not be updated.
 ## Account value in time
 Blue line shows total net worth in time, orange shows invested amount.
 
