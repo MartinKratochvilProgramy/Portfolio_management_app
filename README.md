@@ -2,11 +2,11 @@
 Manage your net worth with the Yahoo finance API.
 
 # How to run
-Program requires python to be installed on your machine. Install required packages by running:
+Install required packages by running:
 ```
 pip install -r requirements.txt
 ```
-Start the program by running:
+Start the program in the command line by running:
 ```
 python main.py
 ```
