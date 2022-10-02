@@ -13,6 +13,7 @@ python main.py
 Write actions into the console, following commands are available:
 
 ![image](https://user-images.githubusercontent.com/94861828/192496793-3c091ac7-da54-46ba-b16e-981bff569573.png)
+## Commands:
 
 Show stocks - lists all stocks in users portfolio
 
