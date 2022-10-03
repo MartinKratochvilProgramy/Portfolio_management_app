@@ -34,7 +34,7 @@ Percent change in portfolio value since it's creation.
 
 ![image](https://user-images.githubusercontent.com/94861828/192499672-5a653a9d-aff3-40ad-95e5-e19092b74e4b.png)
 ## Pie
-Pie chart of percentage amount of each individual stock
+Pie chart of amount of each individual stock.
 
 ![image](https://user-images.githubusercontent.com/94861828/192498866-46aedc34-3277-4d5c-ba64-66379d985f76.png)
 
